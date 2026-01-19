@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Branding - Kaydra Hopkins</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+    
+    
+<body>  
+  <button class="nav-toggle">←</button>
+  <!-- Same sidebar as index.html -->
+  <aside class="sidebar">
+    <h1 class="logo">KAYDRA</h1>
+  </aside>
+      <aside class="sidebar">
+    <h1 class="logo"><a href="baseindex.html">KAYDRA</a></h1>
+    <nav>
+      <ul>
+        <li><a href="music-branding.html">Music Branding</a></li>
+        <li><a href="professional-branding.html">Professional Branding</a></li>
+        <li><a href="logo-design.html">Logo Design</a></li>
+        <li><a href="creative-experiences.html">Creative Experiences</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>  
+
+  <main class="content">
+    <!-- Header image with overlay text -->
+    <section class="professional-header">
+      <div class="header-overlay">
+        <h1>Professional Branding</h1>
+      </div>
+    </section>
+
+    <!-- Short intro description -->
+    <div class="intro-text">
+      <p>Elevated branding photography and visual identity for professionals. From authors to executives, creating images that communicate authority and personality.</p>
+    </div>
+
+    <!-- 3 Professional Experiences -->
+    <section class="experiences">
+      <!-- Hairstylist Grace Saltmarsh -->
+      <div class="experience-item">
+            <div class="experience-text">
+        <h2>Hairstylist Grace Saltmarsh</h2>
+        <p>Grace came to me wanting to establish a visual identity that authentically represented her hairdressing services specializing in color, editorial styling, and cosmetology. After years in business, she had experienced uncomfortable homophobic clients and wanted imagery that clearly signaled her proudly queer identity while showcasing her young, spunky personality. We crafted an inclusive shoot blending her professional work with personal authenticity - vibrant colors, bold styling, and confident energy. Our second shoot focused on availability branding for appointments plus positioned her for future hair product collaborations. Fun outtakes from the second shoot are in the <a href="gallery.html">full gallery</a>.</p>
+      <p><a href="https://www.instagram.com/graciesglamlooks/" target="_blank">@graciesglamlooks</a></p>
+    </div>
+          <div class="photo-right">
+            <img src="images/grace-1.jpg" alt="Grace Saltmarsh">
+          </div>
+          <div class="photo-row">
+            <img src="images/grace-2.jpg" alt="Grace Saltmarsh">
+            <img src="images/grace-3.jpg" alt="Grace Saltmarsh">
+            <img src="images/grace-4.jpg" alt="Grace Saltmarsh">
+          </div>
+                </div>
+
+      <!-- WWE SportsIllustrated Author Noelle -->
+      <div class="experience-item">
+             <div class="experience-text">
+        <h2>Noelle Perry at SportsIllustrtated</h2>
+        <p>I brought Noelle's WWE author energy into the studio to create an identity showcasing her as both professional author and passionate wrestling journalist. She wanted imagery that positioned her authority across LinkedIn, Sports Illustrated, and social media while celebrating her WWE fandom. We brought WWE trading cards, action figures, and the heavyweight championship belt into the studio, composing shots that blended professional headshots with authentic wrestling passion. The result was a versatile photo set communicating her dual identity as credentialed journalist and dedicated fan - perfect for bylines, profiles, and personal branding.</p>
+      <p><a href="https://www.instagram.com/noelleeperry/" target="_blank">@noelleeperry</a></p>      </div>
+
+          <div class="photo-right">
+            <img src="images/noelle-1.jpg" alt="Noelle">
+            </div> 
+          <div class="photo-row">
+            <img src="images/noelle-2.jpg" alt="Noelle">
+            <img src="images/noelle-3.jpg" alt="Noelle">
+            <img src="images/noelle-4.jpg" alt="Noelle">
+          </div>
+                 </div>
+
+      <!-- LinkedIn Professional Headshots -->
+      <div class="experience-item">
+            <div class="experience-text">
+        <h2>LinkedIn Professional Headshots</h2>
+        <p>Executive headshots optimized for LinkedIn profiles, speaking engagements, and professional branding. Clean, approachable, authoritative.</p></div>
+        <div class="professional-photos">
+          <div class="photo-right">
+            <img src="images/linkedin-1.jpg" alt="Professional Headshot">
+            </div></div>
+          <div class="photo-row">
+            <img src="images/linkedin-2.jpg" alt="Professional Headshot">
+            <img src="images/linkedin-3.jpg" alt="Professional Headshot">
+            <img src="images/linkedin-4.jpg" alt="Professional Headshot">
+            </div>
+        </div>
+    </section>
+  </main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const sidebars = document.querySelectorAll('.sidebar'); // Get ALL sidebars
+    
+    if (navToggle && sidebars.length > 0) {
+      navToggle.addEventListener('click', () => {
+        // Toggle active class on ALL sidebars
+        sidebars.forEach(sidebar => {
+          sidebar.classList.toggle('active');
+        });
+      });
+      
+      // Close sidebar when clicking outside
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && 
+            !Array.from(sidebars).some(sidebar => sidebar.contains(e.target)) &&
+            !navToggle.contains(e.target) && 
+            Array.from(sidebars).some(sidebar => sidebar.classList.contains('active'))) {
+          sidebars.forEach(sidebar => {
+            sidebar.classList.remove('active');
+          });
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>
