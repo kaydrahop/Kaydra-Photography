@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Branding - Kaydra Hopkins</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+    
+    
+<body>  
+  <button class="nav-toggle">←</button>
+      <aside class="sidebar">
+    <h1 class="logo"><a href="baseindex.html">KAYDRA</a></h1>
+    <nav>
+      <ul>
+        <li><a href="music-branding.html">Music Branding</a></li>
+        <li><a href="professional-branding.html">Professional Branding</a></li>
+        <li><a href="logo-design.html">Logo Design</a></li>
+        <li><a href="creative-experiences.html">Creative Experiences</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside> 
+<main class="content">
+    <!-- Big photo LEFT + Contact RIGHT -->
+    <section class="contact-hero">
+      <div class="contact-photo">
+        <img src=images/kaydra-contact.jpg alt="Kaydra Hopkins">
+      </div>
+      <div class="contact-info">
+        <h1>Get In Touch</h1>
+        <p>Ready to discuss your project? Let's create something amazing together.</p>
+        
+        <!-- Email Form -->
+        <form class="contact-form" action="https://formsubmit.co/kaydrahopkins0205@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="subject" placeholder="Subject" required>
+          <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Social Buttons -->
+        <div class="social-buttons">
+          <a href="https://www.linkedin.com/in/kaydra-hopkins-0205" target="_blank" class="social-btn linkedin">
+            LinkedIn
+          </a>
+          <a href="https://instagram.com/bykaydra" target="_blank" class="social-btn instagram">
+            Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const sidebars = document.querySelectorAll('.sidebar'); // Get ALL sidebars
+    
+    if (navToggle && sidebars.length > 0) {
+      navToggle.addEventListener('click', () => {
+        // Toggle active class on ALL sidebars
+        sidebars.forEach(sidebar => {
+          sidebar.classList.toggle('active');
+        });
+      });
+      
+      // Close sidebar when clicking outside
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && 
+            !Array.from(sidebars).some(sidebar => sidebar.contains(e.target)) &&
+            !navToggle.contains(e.target) && 
+            Array.from(sidebars).some(sidebar => sidebar.classList.contains('active'))) {
+          sidebars.forEach(sidebar => {
+            sidebar.classList.remove('active');
+          });
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>

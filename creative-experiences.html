@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Branding - Kaydra Hopkins</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+    
+    
+<body>  
+  <!-- Same sidebar as index.html -->
+  <button class="nav-toggle">←</button>
+  <aside class="sidebar">
+    <h1 class="logo">KAYDRA</h1>
+  </aside>
+      <aside class="sidebar">
+    <h1 class="logo"><a href="baseindex.html">KAYDRA</a></h1>
+    <nav>
+      <ul>
+        <li><a href="music-branding.html">Music Branding</a></li>
+        <li><a href="professional-branding.html">Professional Branding</a></li>
+        <li><a href="logo-design.html">Logo Design</a></li>
+        <li><a href="creative-experiences.html">Creative Experiences</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>  
+    
+     <main class="content">
+    <!-- Header Section -->
+<section class="creative-header">
+      <div class="header-overlay">
+  <h1>Professional Creative Environment</h1>
+    </div>
+    
+</section>
+
+    <!-- Industry Intern Section -->
+    <section class="intern-section">
+      <h2>Industry Intern at Autonomy Music Group</h2>
+      <div class="content-text">
+        <p>During my time at Autonomy Music Group in London, I immersed myself in the vibrant UK music scene, capturing authentic moments that helped artists connect with their audiences. This experience transformed my understanding of music industry branding and content creation, allowing me to develop skills that bridge creative storytelling with strategic marketing.</p>
+        <p>As a Project Manager Assistant, I balanced office responsibilities with creative fieldwork, attending late-night shows and industry events while supporting the team's administrative needs. My position involved collaborating directly with artists to develop their visual identities and create content that resonated with their unique sounds. This dual role gave me invaluable insights into both the business and creative sides of artist management.</p>
+        <p>The London music scene provided a dynamic backdrop for my work, with its rich diversity of genres and passionate community of creators. Autonomy's approach to artist development emphasized authenticity and innovation, encouraging artists to express their unique voices while building sustainable careers. I quickly adapted to the rhythm of balancing daytime strategy sessions with evening performances, capturing content that told compelling stories about the artists and their journeys.</p>
+      </div>
+    </section>
+
+    <!-- Photography Portfolio Section -->
+    <section class="portfolio-section">
+      <h2>Photography Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item"><img src="images/creative-1.jpg" alt="Portfolio 1"></div>
+        <div class="portfolio-item"><img src="images/creative-2.jpg" alt="Portfolio 2"></div>
+        <div class="portfolio-item"><img src="images/creative-3.jpg" alt="Portfolio 3"></div>
+        <div class="portfolio-item"><img src="images/creative-4.jpg" alt="Portfolio 4"></div>
+        <div class="portfolio-item"><img src="images/creative-5.jpg" alt="Portfolio 5"></div>
+        <div class="portfolio-item"><img src="images/creative-6.jpg" alt="Portfolio 6"></div>
+        <div class="portfolio-item"><img src="images/creative-7.jpg" alt="Portfolio 7"></div>
+        <div class="portfolio-item"><img src="images/creative-8.jpg" alt="Portfolio 8"></div>
+        <div class="portfolio-item"><img src="images/creative-9.jpg" alt="Portfolio 9"></div>
+        <div class="portfolio-item"><img src="images/creative-10.jpg" alt="Portfolio 10"></div>
+        <div class="portfolio-item"><img src="images/creative-11.jpg" alt="Portfolio 11"></div>
+        <div class="portfolio-item"><img src="images/creative-12.jpg" alt="Portfolio 12"></div>
+        <div class="portfolio-item"><img src="images/creative-13.jpg" alt="Portfolio 13"></div>
+        <div class="portfolio-item"><img src="images/creative-14.jpg" alt="Portfolio 14"></div>
+        <div class="portfolio-item"><img src="images/creative-15.jpg" alt="Portfolio 15"></div>
+                  <div class="portfolio-item"><img src="images/creative-16.jpg" alt="Portfolio 16"></div>
+        <div class="portfolio-item"><img src="images/creative-17.jpg" alt="Portfolio 17"></div>
+        <div class="portfolio-item"><img src="images/creative-18.jpg" alt="Portfolio 18"></div>
+      </div>
+    </section>
+
+    <!-- Reflection Section -->
+    <section class="reflection-section">
+      <div class="content-text">
+        <p>My time at Autonomy enhanced my technical abilities in photography and video production while developing my strategic thinking around content planning and audience engagement. I refined my collaborative approach to creative work, learning to balance artist vision with marketing objectives. Most importantly, I gained confidence in my ability to capture authentic moments that resonate with audiences and support artist development.</p>
+        <p>This experience fundamentally shaped my approach to branding and visual storytelling. The connections I made in London continue to influence my work, providing a global perspective on music marketing. I apply the lessons learned at Autonomy to my current projects, emphasizing authenticity, strategic planning, and the power of visual content to build meaningful connections between artists and audiences.</p>
+      </div>
+    </section>
+  </main>
+  
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const sidebars = document.querySelectorAll('.sidebar'); // Get ALL sidebars
+    
+    if (navToggle && sidebars.length > 0) {
+      navToggle.addEventListener('click', () => {
+        // Toggle active class on ALL sidebars
+        sidebars.forEach(sidebar => {
+          sidebar.classList.toggle('active');
+        });
+      });
+      
+      // Close sidebar when clicking outside
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && 
+            !Array.from(sidebars).some(sidebar => sidebar.contains(e.target)) &&
+            !navToggle.contains(e.target) && 
+            Array.from(sidebars).some(sidebar => sidebar.classList.contains('active'))) {
+          sidebars.forEach(sidebar => {
+            sidebar.classList.remove('active');
+          });
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>

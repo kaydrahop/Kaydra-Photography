@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Branding - Kaydra Hopkins</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+    
+    
+<body>  
+  <button class="nav-toggle">←</button>
+  <!-- Same sidebar as index.html -->
+  <aside class="sidebar">
+    <h1 class="logo">KAYDRA</h1>
+  </aside>
+      <aside class="sidebar">
+    <h1 class="logo"><a href="baseindex.html">KAYDRA</a></h1>
+    <nav>
+      <ul>
+        <li><a href="music-branding.html">Music Branding</a></li>
+        <li><a href="professional-branding.html">Professional Branding</a></li>
+        <li><a href="logo-design.html">Logo Design</a></li>
+        <li><a href="creative-experiences.html">Creative Experiences</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>  
+
+  <main class="content">
+    <!-- Header -->
+    <section class="case-header">
+      <h1>Case Studies</h1>
+    </section>
+
+    <!-- MBA Bio -->
+    <section class="mba-bio">
+      <div class="bio-text">
+        <h2>MBA in Marketing</h2>
+        <p>Final semester MBA candidate specializing in Marketing and Media Innovations. Pursued an MBA to complement creative talents with strategic marketing management, blending passion for innovative initiatives with analytical rigor. Coursework spans brand management, global supply chain management, finance and accounting, digital advertising, marketing analytics, journalism techniques, and service marketing for customer engagement—equipping me to bridge creative vision with measurable business outcomes.</p>
+        <p>Key projects deepened expertise where entertainment intersects business strategy. Led a comprehensive rebrand for a well-known music festival, applying consumer behavior insights and campaign analytics to drive attendance growth. Completed a consulting engagement mapping supply chain optimization outcomes for operational efficiency. Analyzed luxury housing market trends, identifying growth opportunities through competitive positioning and demographic forecasting.</p>
+
+       <p>These experiences honed ability to translate market data into compelling creative strategies—directly informing the featured  projects showcased below.</p>
+      </div>
+    </section>
+
+    <!-- 4 Project PDFs + Links -->
+    <section class="projects-section">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        
+        <!-- Boston Calling Rebrand -->
+        <div class="project-card">
+          <div class="project-icon">📄</div>
+          <h3>Boston Calling Rebrand</h3>
+          <p>Comprehensive brand management strategy expanding market reach through optimized programming and targeted advertising channels. Demonstrates data-informed positioning to capture largest possible festival audience while enhancing ROI across digital and traditional media.</p>
+          <a href=images/boston-calling-rebrand.pdf target="_blank" class="project-link">View PDF</a>
+        </div>
+
+        <!-- Trust Fund Towers -->
+        <div class="project-card">
+          <div class="project-icon">🌐</div>
+          <h3>Trust Fund Towers</h3>
+          <p>Data-driven market analysis exposing Boston luxury housing dynamics and downstream pressure on general housing affordability. Interactive storytelling reveals investment patterns, pricing trends, and policy implications through compelling visualizations and economic forecasting.</p>
+          <a href="https://humes64.wixsite.com/trust-fund-towers" target="_blank" class="project-link">View Website</a>
+        </div>
+
+        <!-- Popping the Boston Music Bubble -->
+        <div class="project-card">
+          <div class="project-icon">🔗</div>
+          <h3>Popping the Boston Music Bubble</h3>
+          <p>Multi-media microsite uniting Boston's fragmented music economy—venues, musicians, nonprofits—into cohesive growth ecosystem. Features original video interviews with local stakeholders, musician testimonials, interactive venue map, and actionable strategies for industry collaboration.</p>
+          <a href="https://popthebostonmusicbubble.wordpress.com/" target="_blank" class="project-link">Read Article</a>
+        </div>
+
+        <!-- From Chords to Crowds -->
+        <div class="project-card">
+          <div class="project-icon">📖</div>
+          <h3>From Chords to Crowds</h3>
+          <p>Hand-coded journal article exploring authenticity-driven fan engagement for independent bands. Original RingPop! concert photography documents real-time social media activation strategies, revealing how genuine digital presence converts casual attendees into loyal communities.</p>
+          <a href="https://journalismdesign.camd.northeastern.edu/boundaries/hopkins/" target="_blank" class="project-link">View Project</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const sidebars = document.querySelectorAll('.sidebar'); // Get ALL sidebars
+    
+    if (navToggle && sidebars.length > 0) {
+      navToggle.addEventListener('click', () => {
+        // Toggle active class on ALL sidebars
+        sidebars.forEach(sidebar => {
+          sidebar.classList.toggle('active');
+        });
+      });
+      
+      // Close sidebar when clicking outside
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && 
+            !Array.from(sidebars).some(sidebar => sidebar.contains(e.target)) &&
+            !navToggle.contains(e.target) && 
+            Array.from(sidebars).some(sidebar => sidebar.classList.contains('active'))) {
+          sidebars.forEach(sidebar => {
+            sidebar.classList.remove('active');
+          });
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>

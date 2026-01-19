@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaydra Hopkins - Creative Director</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  
+  
+<body>
+  <button class="nav-toggle">←</button>
+      <aside class="sidebar">
+    <h1 class="logo"><a href="baseindex.html">KAYDRA</a></h1>
+    <nav>
+      <ul>
+        <li><a href="music-branding.html">Music Branding</a></li>
+        <li><a href="professional-branding.html">Professional Branding</a></li>
+        <li><a href="logo-design.html">Logo Design</a></li>
+        <li><a href="creative-experiences.html">Creative Experiences</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside> 
+<!-- Full viewport hero image -->
+    
+    
+  <main class="hero-container">
+    <div class="hero-image">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          KAYDRA<br>
+          HOPKINS
+        </h1>
+        <p class="hero-subtitle">
+          Visual storytelling for<br>
+          music, brands & experiences
+        </p>
+      </div>
+    </div>
+  </main>
+  <script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const sidebar = document.querySelector('.sidebar');
+  
+  navToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+  
+  // Optional: Close sidebar when clicking outside of it
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768 && 
+        !sidebar.contains(e.target) && 
+        !navToggle.contains(e.target) && 
+        sidebar.classList.contains('active')) {
+      sidebar.classList.remove('active');
+    }
+  });
+</script>
+</body>
+</html>
+
+
